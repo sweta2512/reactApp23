@@ -1,0 +1,32 @@
+#git init
+#git branch -M main(change default branch from master to main)
+#git add .
+#git commit -m "message"
+
+#git remote add origin  url
+
+
+# git push origin main
+
+
+//rename origin with other name
+#git remote rename origin nename(rename origin with other name)
+#git remote -v(verify new name of origin)
+
+#  Git Configuration
+#Set a new username and email for that repository:
+git config user.name "NewUserName"
+git config user.email "newemail@example.com"
+
+#Set a new global username and email := 
+git config --global user.name "NewGlobalUserName"
+git config --global user.email "newglobalemail@example.com"
+
+#Check Your Current User Settings
+ => for global
+git config --global user.name
+git config --global user.email
+
+#For the repository-specific user:
+git config user.name
+git config user.email

@@ -1,0 +1,22 @@
+{
+  "name": "interviewjs",
+  "version": "1.0.0",
+  "description": "Study with akashy saini react. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweta2512/reactApp23.git"
+  },
+  "author": "Sweta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweta2512/reactApp23/issues"
+  },
+  "homepage": "https://github.com/sweta2512/reactApp23#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
