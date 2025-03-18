@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 800px;">
+        <p>
+            Q1:- C:\Users\Sushant>parcel index.html Server running at http://localhost:1234 × Build failed. unknown:
+            Entry C:\Users\Sushant\index.html does not exist
+            <br><br>
+            ANS - The error message unknown: Entry C:\Users\Sushant\index.html does not exist indicates that Parcel is
+            trying to find the index.html file in the wrong location. It's looking in C:\Users\Sushant\ but based on
+            your previous command prompt, your working directory seems to be different.
+        <h1>How to Resolve This:</h1>
+        1.Ensure You're in the Correct Directory: Make sure you're in the project folder where your index.html file is
+        located. For example, if your project is in C:\xampp\htdocs\nodeandreact\interviewjs, you need to navigate
+        to that directory first.
+
+        Open PowerShell or Command Prompt.
+        Use the cd command (change directory) to navigate to the folder where your index.html file is located. For
+        example:
+        bash
+        Copy
+        cd C:\xampp\htdocs\nodeandreact\interviewjs
+        <br>
+        2. Verify the index.html File Exists: After navigating to the correct directory, make sure the index.html file
+        exists in that directory. You can list the files in your current directory with the dir command (in Command
+        Prompt) or ls command (in PowerShell):
+
+        In Command Prompt:
+        bash
+        Copy
+        dir
+        In PowerShell:
+        bash
+        Copy
+        ls
+        Ensure that index.html is in the list of files in that directory.
+
+        Run Parcel from the Correct Directory: Once you're in the correct directory where index.html is located, run the
+        following command:
+
+        bash
+        Copy
+        parcel index.html
+        This should start the Parcel development server and open the app in the browser at http://localhost:1234.
+
+
+        </p>
+        <p>
+        <h4>Q2: I notice that when i installed parcel globally, it was not get install in our folder node_module
+            directory , why? then where does it was?</h4>
+        ANS:- When you install a package globally (using the -g flag), it is not installed in your project's
+        node_modules directory. Instead, global packages are installed in a system-wide location, separate from your
+        project folder. This allows you to use the package across all projects on your system without having to install
+        it repeatedly.
+
+        <h2>Here's why and where global packages are installed:</h2>
+        Why Global Packages Are Not in node_modules:
+        Global Installation: When you install a package globally, it's not specific to any single project. The package
+        is installed in a global location that is shared across all your projects, so you can use it from anywhere on
+        your system without installing it again for every project.
+        Project-Specific Installation: When you install a package locally, it's installed into the node_modules folder
+        of your current project. This keeps dependencies isolated and ensures that each project has its own versions of
+        dependencies without affecting others.
+        <h2>Where Are Global Packages Installed?</h2>
+        The location of globally installed packages depends on your system and configuration. Below are the default
+        locations for different operating systems:
+
+        1. On Windows:
+        The global packages are usually installed in a directory like:
+        bash
+        Copy
+        C:\Users\<Your-Username>\AppData\Roaming\npm\node_modules
+            The global parcel.ps1 script (PowerShell) would be located in:
+            bash
+            Copy
+            C:\Users\<Your-Username>\AppData\Roaming\npm\parcel.ps1
+                2. On macOS/Linux:
+                The global packages are installed in a directory like:
+                bash
+                Copy
+                /usr/local/lib/node_modules
+                or sometimes in your home directory:
+                bash
+                Copy
+                ~/.npm-global/lib/node_modules
+                The executables (like parcel) are linked into a directory in your $PATH, which makes them accessible
+                from the command line.
+                3. To Find Where Global Packages Are Installed:
+                You can run the following command to check where your global npm packages are installed:
+
+                bash
+                Copy
+                npm root -g
+                This will print the path to the global node_modules directory.
+
+                <h2> How to Access Global Packages:</h2>
+                Running a Global Package: Once a package is installed globally, you can run it from anywhere in your
+                terminal (command line) because global packages are added to your system's PATH.
+                For example, after installing parcel globally, you can run:
+                bash
+                Copy
+                parcel index.html
+                And this will work, even if you're not in the project folder where parcel is installed, because parcel
+                is available globally.
+                Key Differences:
+                Local installation: Packages are installed inside node_modules in the project directory.
+                Global installation: Packages are installed in a global location, accessible from anywhere, without
+                being tied to a single project.
+                Conclusion:
+                When you install a package globally, it is not stored in your project's node_modules folder. It is
+                stored in a system-wide location, making it accessible for use in any project.
+                To check where global packages are installed, you can run npm root -g.
+                </p>
+
+                <p>
+                <h4>Q3:i was getting this error while using npx parcel index.html command, Uncaught Error: Cannot find
+                    module '@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js'
+                    at newRequire (interviewjs.e1fb5c8b.js:70:19)
+                    at newRequire (interviewjs.e1fb5c8b.js:54:18)
+                    at localRequire (interviewjs.e1fb5c8b.js:93:35)
+                    at newRequire (interviewjs.e1fb5c8b.js:80:24)
+                    at interviewjs.e1fb5c8b.js:140:5
+                    at interviewjs.e1fb5c8b.js:159:3
+                </h4>
+
+                ANS - This issue occurs because of version compatiablity issue. before i was using react 19.3.0 ,
+                react-dom 19.3.0 , parcel 2.14.0 ,parcel/transformer-react-refresh-wrap 2.14.0.
+                <br>
+                Then i change react 18.3.1, react-dom 18.3.1, parcel 2.13.1, parcel/transformer-react-refresh-wrap
+                2.13.1, then the issue get fixed.
+                <h5>
+                    npm install react@18 react-dom@18 --save
+                    <br>
+                    npm install parcel@2.13.1 @parcel/transformer-react-refresh-wrap@2.13.1 --save-dev
+
+                </h5>
+                </p>
+
+
+                <p>
+                    <h4>Q4:- </h4>
+
+
+                </p>
+    </div>
+
+</body>
+
+</html>

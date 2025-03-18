@@ -2,9 +2,11 @@
   "name": "interviewjs",
   "version": "1.0.0",
   "description": "Study with akashy saini react. ",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "npx parcel index.html",
+    "test": "jest",
+    "dev": "parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,13 @@
     "url": "https://github.com/sweta2512/reactApp23/issues"
   },
   "homepage": "https://github.com/sweta2512/reactApp23#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
-    "parcel": "^2.13.3"
+    "@parcel/transformer-react-refresh-wrap": "^2.13.3",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
   }
 }

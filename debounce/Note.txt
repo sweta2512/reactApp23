@@ -30,3 +30,38 @@ git config --global user.email
 #For the repository-specific user:
 git config user.name
 git config user.email
+
+
+#create a react app without using npm create-react-app appName
+//react cdn
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+
+
+//before using parcel we access our app 
+file:///C:/xampp/htdocs/nodeandreact/interviewjs/index.html
+
+// now we will create build for our app using parcel
+npx parcel index.html
+
+//above command will bundle all files and create a server 
+http://localhost:1234
+
+//now install react in our app instead of using cdn
+npm install react or, npm i react
+
+//NOW install react-dom
+npm install react-dom(npm i react react-dom)
+
+
+// after importing react and react-dom in app.js we are getting error (uncaught SyntaxError: Cannot use import statement outside a module (at app.js:3:1))
+
+<script src="./app.js"></script> //browser read this file as a normal javascript file and normal javascript script does not have import and export
+<script type="module" src="./app.js"></script> // so, we have to add type="module", that is we are telling browser that this is not a normal javascript file . this will be consider as a module
+
+
+//error: Access to script at 'file:///C:/xampp/htdocs/nodeandreact/interviewjs/app.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.
+
+
+//npm install react@18 react-dom@18 --save
+//npm install parcel@2.13.1 @parcel/transformer-react-refresh-wrap@2.13.1 --save-dev
