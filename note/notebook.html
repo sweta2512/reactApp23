@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div style="width: 800px;">
+    <div style="width: 1000px; margin:50px;">
         <p>
             Q1:- C:\Users\Sushant>parcel index.html Server running at http://localhost:1234 × Build failed. unknown:
             Entry C:\Users\Sushant\index.html does not exist
@@ -145,7 +145,147 @@
 
 
                 <p>
-                    <h4>Q4:- </h4>
+                <h4>Q4:-why do list item need key ??</h4>
+                ANS -> In React, when rendering a list of items, each item should be given a <span
+                    style="color: red;">key</span> prop to uniquely identify it. This is important for several reasons,
+                particularly for performance and the efficient updating of the DOM.
+
+                <h4>Reasons why list items need a key:</h4>
+                <h4>Efficient Reconciliation:</h4>
+
+                React uses a process called <span style="color: brown;">Reconciliation</span> to update the DOM
+                efficiently. When an item in a list changes
+                (for example, if an item is added, removed, or reordered), React needs a way to identify which items
+                have changed, and which ones haven't.
+                The key helps React quickly identify which elements have been modified, added, or removed.
+                Without a unique key, React will have to re-render the entire list whenever a change occurs, leading to
+                unnecessary work and performance issues.
+                <h4> React Track Elements:</h4>
+
+                The key allows React to keep track of each element between re-renders. If React doesn't have a way to
+                uniquely identify an item, it may incorrectly reuse a DOM element for a different item when the list
+                changes, leading to issues like incorrect content being displayed or missing elements.
+                For example, if you add a new item in the middle of the list and do not have a key, React might not be
+                able to detect that a new item was inserted, and instead might re-render the list incorrectly.
+                <h4>Optimized DOM Updates:</h4>
+
+                With a key, React can compare the current state of the list with the previous state and figure out the
+                exact change required (i.e., which item to add, remove, or move), instead of re-rendering the entire
+                list.
+                This optimization significantly improves performance, especially when working with large lists.
+
+                </p>
+
+                <p>
+                <h4>Q5. I don't understand locally installed package and globally installed package and npx and npm
+                    working?</h4>
+                Ans : Let’s break down locally installed packages, globally installed packages, and the difference
+                between npm and npx to give you a clearer understanding.
+                <br><br>
+                <h3>1. Local vs Global Package Installation</h3>
+                <h4>Local Package Installation:</h4>
+                A local package is installed inside the project folder (usually in the node_modules directory).
+                It is meant to be used only within that project.
+                When you run a command from a local package, you can’t directly access it from the command line. You
+                would need to either run it through npx or use npm run to reference it.
+                Local packages are useful when you want to use a tool in only one project, without affecting other
+                projects.
+                <br><br>
+                Example of installing a local package:
+                <span style="color:red;">npm install parcel --save-dev</span>
+                This installs Parcel only in the current project, and the package will be located in the node_modules
+                folder. You would need to access it through npx or npm run (which references it from node_modules).
+
+                <h4>Global Package Installation:</h4>
+                A global package is installed once and can be used across all projects on your system.<br>
+                Global packages are accessible from the command line anywhere on your computer.<br>
+                You generally install packages globally for tools you use across multiple projects (e.g., linters, build
+                tools, etc.).<br><br>
+                Example of installing a global package:
+
+
+                <span style="color:red;">npm install -g parcel</span>
+                This installs Parcel globally on your computer, so you can use the parcel command anywhere in your
+                terminal, without needing to install it in each project.
+
+                <h3>2. What is npm and How Does It Work?</h3>
+                npm is the package manager for JavaScript and Node.js.
+                It is used to install, manage, and run packages (like libraries and tools) in your projects.
+                <br>
+                When you run commands like:
+
+                <span style="color:red;"> npm install <package-name></span>
+                It installs the package either locally (inside the current project folder) or globally (on your entire
+                system, if you use -g).
+                When you use npm with a local package:
+                You usually need to access the local package via an npm script (defined in package.json) or with npx.
+                <br><br>
+                For example, in package.json:
+
+                "scripts": {
+                "start": "parcel index.html"
+                }
+                You can run:
+                <span style="color:red;">npm run start</span>
+                This will run the parcel command from node_modules/.bin/parcel.
+
+                <h3>3. What is npx and How Does It Work?</h3>
+                npx is a tool that comes with npm (since npm 5.2).
+                It is used to run executables (like parcel) that are installed locally or temporarily, without needing
+                to reference them explicitly in package.json.
+                npx allows you to run commands from local dependencies or even download and run a package temporarily
+                without installing it globally or locally.
+                Example with npx:
+                If Parcel is installed locally in your project, you can run it directly using npx:
+
+
+                npx parcel index.html
+                This will search for Parcel in your local node_modules folder and run it.
+                If Parcel is not installed locally, npx will download and run Parcel temporarily.
+                Why does npx work with local packages?
+                npx automatically looks for executables in node_modules/.bin and runs them. So you can run commands from
+                locally installed packages without manually setting up scripts in package.json.
+
+                <h3>In Summary:</h3>
+                Local Package Installation:
+                Installed inside a specific project (e.g., node_modules).
+                Used only within the project.
+                To run commands from local packages, you need to use npx or npm run.
+                <h3>Global Package Installation:</h3>
+                Installed globally on your system.
+                Accessible from anywhere in your terminal.
+                You can directly run commands (e.g., parcel) after installing them globally.
+                npm:
+                Used to install and manage packages in your project.
+                <span style="color:red;">npm install <package> </span>installs a package either locally or globally.
+                <br>
+                To run local packages, you typically use scripts in package.json or npx.
+                npx:
+                Executes commands from local packages without needing to add them to package.json.
+                If the package is not installed locally, npx will temporarily download and run it.
+                <br>
+                <h3>Quick Examples:</h3>
+                <h4>Installing a package locally:</h4>
+
+                <span style="color:red;">npm install parcel --save-dev</span>
+                This installs Parcel locally in the node_modules folder.
+
+                To run Parcel, use:
+
+                <span style="color:red;">npx parcel index.html</span>
+                <h4>Installing a package globally:</h4>
+
+                <span style="color:red;">npm install -g parcel</span>
+                This installs Parcel globally on your system.
+                To run Parcel anywhere, use:
+
+                <span style="color:red;">parcel index.html</span>
+                <br>
+                <h4>Why use npx instead of npm for local packages?</h4>
+                If you install Parcel locally using npm install parcel --save-dev, you can use npx parcel index.html
+                without having to modify package.json.
+                This allows you to run tools and commands that are only needed for your specific project without having
+                to install them globally.
 
 
                 </p>

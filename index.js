@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 
 
 // const createElement = React.createElement('h1',{},'first React app');
-const jsxElement = <h1>first React app</h1>;
+const jsxElement = <h1>First React App</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(jsxElement);
 //root.render(createElement);
