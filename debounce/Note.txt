@@ -65,3 +65,10 @@ npm install react-dom(npm i react react-dom)
 
 //npm install react@18 react-dom@18 --save
 //npm install parcel@2.13.1 @parcel/transformer-react-refresh-wrap@2.13.1 --save-dev
+
+
+///// const createElement = React.createElement('h1',{},'first React app');
+//const jsxElement = <h1>First React App</h1>;
+
+//root.render(createElement);
+//root.render(jsxElement);

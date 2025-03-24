@@ -20,7 +20,8 @@
   "homepage": "https://github.com/sweta2512/reactApp23#readme",
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
     "@parcel/transformer-react-refresh-wrap": "^2.13.3",

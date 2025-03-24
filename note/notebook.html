@@ -286,8 +286,14 @@
                 without having to modify package.json.
                 This allows you to run tools and commands that are only needed for your specific project without having
                 to install them globally.
-
-
+                </p>
+                <p>
+                    <h4>Q6. Difference between element and component?</h4>
+                    ANS:An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components.
+                    Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it cannot be mutated.
+                    we can create element by using : <br>let element = React.createElement("div", { id: "login-btn" }, "Login") <br><br>
+                    Components are javascript function or class, that accept input as prop and return elements.
+                    It define how UI should appear and behave.Every component can manage their own state and have life cycle method.
                 </p>
     </div>
 

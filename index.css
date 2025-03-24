@@ -1,0 +1,16 @@
+.head{
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+    height: 100px;
+}
+.headList{
+    display: flex;
+    list-style: none;
+
+}
+
+.headList li{
+    margin: 0px 10px;
+}
