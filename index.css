@@ -1,16 +1,31 @@
-.head{
+.head {
     border: 1px black solid;
     display: flex;
     justify-content: space-between;
     background-color: bisque;
     height: 100px;
+
 }
-.headList{
+
+.headList {
     display: flex;
     list-style: none;
+    margin: 30px 70px 0px 0px;
 
 }
 
-.headList li{
+.headList li {
     margin: 0px 10px;
+    font-size: 21px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.apiImage {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
 }

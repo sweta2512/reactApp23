@@ -288,12 +288,150 @@
                 to install them globally.
                 </p>
                 <p>
-                    <h4>Q6. Difference between element and component?</h4>
-                    ANS:An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components.
-                    Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it cannot be mutated.
-                    we can create element by using : <br>let element = React.createElement("div", { id: "login-btn" }, "Login") <br><br>
-                    Components are javascript function or class, that accept input as prop and return elements.
-                    It define how UI should appear and behave.Every component can manage their own state and have life cycle method.
+                <h4>Q6. Difference between element and component?</h4>
+                ANS:An Element is a plain object describing what you want to appear on the screen in terms of the DOM
+                nodes or other components.
+                Elements can contain other Elements in their props. Creating a React element is cheap. Once an element
+                is created, it cannot be mutated.
+                we can create element by using : <br>let element = React.createElement("div", { id: "login-btn" },
+                "Login") <br><br>
+                Components are javascript function or class, that accept input as prop and return elements.
+                It define how UI should appear and behave.Every component can manage their own state and have life cycle
+                method.
+                </p>
+                <p>
+                <h4>Q7: What is Lazy Loading?</h4>
+                ANS: -
+                Lazy loading is a technique where you only load things when you need them. Imagine you're opening a
+                page, and it has a lot of images, videos, or other things on it. Instead of loading everything right
+                away (which can make the page slow), lazy loading waits to load images or content only when you scroll
+                down to them or when they’re about to be seen.
+
+                <h3>Real-World Example</h3>
+                Think of a long webpage, like a news website or a photo gallery. Instead of waiting for the entire page
+                (with hundreds of images) to load at once, the images load only when you scroll down to them. This makes
+                the page load faster at first, and it doesn't waste time or data loading things you haven’t seen yet.
+
+                <h3>How It Works (in Simple Steps):</h3>
+                1.Page Loads Fast: When you first visit a webpage, only the content you see immediately (the top part of
+                the page) is loaded. Other things (like images further down) are not loaded yet.
+
+                2.Scroll Down: As you scroll down, the browser (or app) notices when an image or content is near the
+                part
+                of the screen you can see.
+
+                3.Content Loads When Needed: As soon as that content (like an image or video) is about to be shown, it
+                starts loading so it’s ready to show to you.
+
+                <h3>Example in React</h3>
+                Here’s how lazy loading works in React, using images as an example:
+
+                Native Lazy Loading for Images:
+                React allows you to use the loading="lazy" attribute to automatically make images lazy-loaded:<br><br>
+
+                <'img' src="image.jpg" alt="example image" loading="lazy" /> <br><br>
+                This means that the image won’t be loaded right away when the page first loads. Instead, it will only
+                load when you scroll down to it.
+                <h3>Lazy Loading for React Components:</h3>
+                Imagine you have a large app with many components. Instead of loading everything when the page first
+                loads, you can use lazy loading to only load components when they are needed.<br>
+
+                Here’s how it works:<br>
+
+                1.You lazy-load a component, meaning it’s only loaded when you actually need it.<br>
+
+                2.You wrap it in Suspense, which shows a loading spinner or message until the component is
+                ready.<br><br>
+                <img src="./img/Screenshot 2025-03-25 104516.png" />
+
+                Here, LazyComponent is only loaded when it is needed, which makes the app load faster initially.<br>
+
+                <h3>Conclusion</h3>
+                Lazy loading helps your page load faster by only loading content when it is needed.
+
+                It’s like waiting to open a drawer until you actually need something from it, instead of opening it
+                right away and
+                having to deal with everything at once.
+
+                For images or components in a web app, lazy loading means loading them only when they’re about to be
+                shown on the
+                screen.
+
+                </p>
+
+                <p>
+                <h4>Q8: suppose i have image at starting of the app near header than lazy loading will make it slow
+                    only?</h4>
+                ANS- You're absolutely right to wonder about that! If you have an image at the start of the app, near
+                the header
+                (meaning it's visible when the page loads), then lazy loading might not be beneficial for that
+                particular image.
+                In fact, lazy loading could make it slower in this case, because the browser would have to wait until
+                the image
+                is about to appear in the viewport before it starts loading.<br><br>
+                <h3>Here's the logic:</h3>
+                <h2>1.For images near the top (visible right away):</h2>
+                <ul>
+                    <li>
+                        Lazy loading would delay the image from loading until it's almost in the viewport (meaning until
+                        you scroll
+                        to it).
+                    </li>
+                    <li>
+                        But, since this image is near the top, it’s already visible when the page loads, so lazy loading
+                        here delays
+                        the image unnecessarily and slows down the experience.
+                    </li>
+                </ul>
+
+                <h2>2.For images lower down (out of view initially)::</h2>
+                <ul>
+                    <li>
+                        Lazy loading is helpful for images that are further down the page (not visible immediately), as
+                        they don’t need to be loaded right away. This way, only the images you're about to see are
+                        loaded, making the initial page load faster.
+                    </li>
+                </ul>
+                <h3>In short:</h3>
+                <ul>
+                    <li>
+                        For images that are visible immediately (like the one near the header), don't use lazy loading
+                        because it would
+                        delay the loading, which is unnecessary.
+                    </li>
+                    <li>
+                        For images that are further down the page (not visible right away), lazy loading is a good
+                        choice to optimize
+                        the page load speed.
+                    </li>
+                </ul>
+                <h3>How to Handle This?</h3>
+                You can make a distinction between images that should be loaded right away and images that can be
+                lazy-loaded. For
+                example:
+
+                <ul>
+                    <li>
+                        For the header image, don’t add loading="lazy" since it's visible immediately. </li>
+                    <li>
+                        For images further down the page, you can add loading="lazy" to make them load only when they're
+                        near the
+                        viewport. </li>
+                </ul>
+                <h3>Example</h3>
+                <span>Image that is visible on initial page load (near the header)</span><br>
+                 <span>"<'img" src="header-image.jpg" alt="Header" />"</span><br>
+
+                <span>Image further down the page (can use lazy loading)</span><br>
+                <span>"<'img' src="below-the-fold-image.jpg" alt="Below the fold" loading="lazy" />"</span>
+                <h3>Conclusion:</h3>
+                <ul>
+                    <li>Lazy loading is great for images that are out of view at first (below the fold), but avoid lazy
+                        loading for
+                        images above the fold (like near the header), as it can actually slow things down instead of
+                        speeding up.</li>
+                </ul>
+
                 </p>
     </div>
 

@@ -1,0 +1,1 @@
+export const LOGO ='https://blog.logowiz.app/wp-content/uploads/2023/08/download-19-min-6.jpg';
