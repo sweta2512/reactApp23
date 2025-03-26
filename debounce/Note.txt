@@ -72,3 +72,18 @@ npm install react-dom(npm i react react-dom)
 
 //root.render(createElement);
 //root.render(jsxElement);
+
+
+//cors error
+//https://cors-anywhere.herokuapp.com/
+ex -   const fetchData= async ()=>{
+            let res = await fetch('https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6217939&lng=77.33674979999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
+            let data = await res.json();
+            setData(data);
+            console.log(data)
+        }
+        fetchData();
+
+//Request Temporary Access for CORS Anywhere:
+//To use https://cors-anywhere.herokuapp.com/, you need to request temporary access. Visit this URL and click "Request temporary access."
+//After doing this, you should be able to make your requests. Make sure to reload your application after requesting access.        

@@ -38,7 +38,7 @@ const appRouter = createBrowserRouter([
         
     },
     {
-        path: '/home',
+        path: '/feedback',
         element: <Body />
     },
 ])

@@ -1,0 +1,26 @@
+.buying_account_form{
+    margin-left: 98px;
+    font-size: 13px;
+
+}
+.css-u4tvz2-MuiFormLabel-root {
+    font-size: 14px !important;
+    color: black !important;
+}
+
+.css-ahj2mt-MuiTypography-root {
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+.upload >button{
+    font-size: 15px !important;
+    background: #0064C8;
+}
+
+.multiselect_data{
+    flex: 0 0 155px;
+    width: 33.33333333%;
+    text-align: end !important;
+    font-size: 14px;
+    color: black;
+}

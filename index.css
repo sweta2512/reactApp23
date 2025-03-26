@@ -29,3 +29,47 @@
     width: 200px;
     margin: 20px;
 }
+.restCard{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 30px 0px 110px;
+}
+
+.cards{
+    margin :20px 10px 0px 0px;
+    padding:10px;
+    border: 2px #f0f0f0 solid;
+    height:auto;
+    width:150px;
+}
+
+.cards:hover{
+    margin :20px 10px 0px 0px;
+    padding:10px;
+    border: 2px #f0f0f0 solid;
+    height:auto;
+    width:140px;
+}
+.resimg{
+    width:150px;
+    height:100px;
+    object-fit: cover;
+}
+
+.fun-card{
+    width:300px;
+    height: auto;
+    border: 2px #f0f0f0 solid;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: beige;
+}
+
+.cl-card{
+    width:300px;
+    height: auto;
+    border: 2px #eee7e7 solid;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: aliceblue;
+}

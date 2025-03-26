@@ -1,0 +1,53 @@
+
+
+
+#forgetButton{
+  background: none !important;
+  border: none;
+  text-decoration: underline;
+  color:#0064C8;
+  font-size: 13px;
+
+}
+
+.warning {
+  color: #F80;
+}
+
+
+
+@media only screen and (max-width:1024px){
+  .cstm-row-btn-btm {
+    gap: 8px;
+  }
+  .cstm-row-btn-btm button{
+    font-size: 13px !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  .buyingAccountUpload{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .cstm-search-input {
+    padding-left: 48px !important;
+  }
+
+  .cstm-purchased-outer .modal-dialog {
+    width: 640px !important;
+}
+  
+}
+
+@media (min-width: 1400px) {
+  .gap-20 {
+    gap: 1px;
+  }
+}

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Head = () => {
     const [text, setText] = useState('')
     const [text2, setText2] = useState('')
-    console.log('RENDER')
     useEffect(() => {
         setText('textttt')
     }, [])
@@ -30,7 +29,7 @@ const Head = () => {
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link> </li>
                 <li><Link to='/contact'>Contact us</Link></li>
-                <li>Feedback</li>
+                <li><Link to='/feedback'>Feedback</Link></li>
 
             </ul>
 

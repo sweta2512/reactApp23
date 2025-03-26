@@ -1,0 +1,29 @@
+.form-check-input {
+    width: 1em !important;
+    height: 1em !important;
+}
+.name{
+    width:'90px';
+    margin-right: 4px;
+    margin-top: 8px;
+}
+.expiry{
+    width:'90px' !important;
+    margin-top: 8px;
+}
+.serial_no{
+    width:'90px' !important;
+    margin-top: 8px;
+}
+.d-flex{
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+.align-arrow{
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
