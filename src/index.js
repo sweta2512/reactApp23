@@ -1,6 +1,6 @@
 //with react package we need to import react and react-dom from node_module
 
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Head from "./component/Head";
 import Body from "./component/Body";
@@ -13,10 +13,12 @@ import {
 } from "react-router-dom";
 
 import "../index.css";
+
+const Grocery = lazy(()=>import('./component/Grocery'));
 const App = () => {
     return (<>
         <Head />
-        <Outlet/>
+        <Outlet />
     </>)
 }
 
@@ -24,7 +26,7 @@ const appRouter = createBrowserRouter([
     {
         path: '/',
         element: <App />,
-        errorElement:<Error/>,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
@@ -34,8 +36,13 @@ const appRouter = createBrowserRouter([
                 path: '/about',
                 element: <About />
             }
+            ,
+            {
+                path: '/grocery',
+                element: <Suspense fallback={<h1>Loading...........</h1>}><Grocery /></Suspense>
+            }
         ],
-        
+
     },
     {
         path: '/feedback',
