@@ -15,15 +15,16 @@
   },
   "author": "Sweta",
   "license": "ISC",
-
   "bugs": {
     "url": "https://github.com/sweta2512/reactApp23/issues"
   },
   "homepage": "https://github.com/sweta2512/reactApp23#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.0"
+    "react-router-dom": "^6.30.0",
+    "tailwindcss": "^4.0.17"
   },
   "devDependencies": {
     "@parcel/transformer-react-refresh-wrap": "^2.13.3",

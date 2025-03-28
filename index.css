@@ -1,4 +1,6 @@
-.head {
+@import "tailwindcss";
+
+/* .head {
     border: 1px black solid;
     display: flex;
     justify-content: space-between;
@@ -72,4 +74,12 @@
     margin-top: 20px;
     padding: 10px;
     background-color: aliceblue;
-}
+} */
+
+
+.cuisine-card-text {
+    white-space: nowrap;        /* Prevents text from wrapping */
+    overflow: hidden;           /* Hides overflowing text */
+    text-overflow: ellipsis;    /* Adds '...' when the text overflows */
+    max-width: 200px;           /* Set a max width for the card */
+  }

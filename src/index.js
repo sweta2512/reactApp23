@@ -15,6 +15,7 @@ import {
 import "../index.css";
 
 const Grocery = lazy(()=>import('./component/Grocery'));
+const RestaurantInfo = lazy(()=>import('./component/RestaurantInfo'));
 const App = () => {
     return (<>
         <Head />
@@ -40,6 +41,9 @@ const appRouter = createBrowserRouter([
             {
                 path: '/grocery',
                 element: <Suspense fallback={<h1>Loading...........</h1>}><Grocery /></Suspense>
+            },{
+                path:'restaurant/:id',
+                element:<Suspense fallback={<h1>Restaurant info loading.............</h1>}><RestaurantInfo/></Suspense>
             }
         ],
 

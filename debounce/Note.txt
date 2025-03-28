@@ -87,3 +87,6 @@ ex -   const fetchData= async ()=>{
 //Request Temporary Access for CORS Anywhere:
 //To use https://cors-anywhere.herokuapp.com/, you need to request temporary access. Visit this URL and click "Request temporary access."
 //After doing this, you should be able to make your requests. Make sure to reload your application after requesting access.        
+
+
+//npm install tailwindcss @tailwindcss/postcss
