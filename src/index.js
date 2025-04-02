@@ -7,6 +7,7 @@ import Body from "./component/Body";
 import About from "./component/About";
 import Home from "./component/Home";
 import Error from "./component/Error";
+import Contact from "./component/Contact";
 import {
     createBrowserRouter,
     RouterProvider, Outlet
@@ -36,6 +37,11 @@ const appRouter = createBrowserRouter([
             {
                 path: '/about',
                 element: <About />
+            }
+            ,
+            {
+                path: '/contact',
+                element: <Contact />
             }
             ,
             {
