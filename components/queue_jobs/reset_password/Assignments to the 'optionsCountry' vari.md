@@ -1,9 +1,0 @@
- Assignments to the 'optionsCountry' variable from inside React Hook useMemo will be lost after each render. To preserve the value over time, store it in a useRef Hook and keep the mutable value in the '.current' property. Otherwise, you can move this variable directly inside useMemo  react-hooks/exhaustive-deps
-  Line 112:20:  Assignments to the 'optionsState' variable from inside React Hook useMemo will be lost after each render. To preserve the value over time, store it in a useRef Hook and keep the mutable value in the '.current' property. Otherwise, you can move this variable directly inside useMemo    react-hooks/exhaustive-deps
-  Line 119:18:  Assignments to the 'optionsVenue' variable from inside React Hook useMemo will be lost after each render. To preserve the value over time, store it in a useRef Hook and keep the mutable value in the '.current' property. Otherwise, you can move this variable directly inside useMemo    react-hooks/exhaustive-deps
-  Line 127:19:  Assignments to the 'optionsEvent' variable from inside React Hook useMemo will be lost after each render. To preserve the value over time, store it in a useRef Hook and keep the mutable value in the '.current' property. Otherwise, you can move this variable directly inside useMemo    react-hooks/exhaustive-deps
-  Line 146:6:   React Hook useEffect has missing dependencies: 'inputValues' and 'onfilter'. Either include them or remove the dependency array. If 'onfilter' changes too often, find the parent component that defines it and wrap that definition in useCallback    
-
-
-   React Hook useEffect has missing dependencies: 'filterHandle' and 'formValues'. Either include them or remove the dependency array. If 'filterHandle' changes 
-too often, find the parent component that defines it and wrap that definition in useCallback   
