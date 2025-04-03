@@ -32,7 +32,7 @@ const Head = () => {
                 <li className='pr-5'><Link to='/contact'>Contact us</Link></li>
                 <li className='pr-5'><Link to='/feedback'>Feedback</Link></li>
                 <li className='pr-5'><Link to='/grocery'>Grocery</Link></li>
-                <li className='pr-5 text-bold'>Cart</li>
+                <li className='pr-5 text-bold' onClick={addCartHandler}>Cart</li>
 
             </ul>
             </div>

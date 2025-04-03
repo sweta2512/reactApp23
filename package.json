@@ -7,7 +7,8 @@
   "scripts": {
     "start": "npx parcel index.html",
     "test": "jest",
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build":"npx parcel build index.html"
   },
   "repository": {
     "type": "git",
