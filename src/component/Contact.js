@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Contact = () => {
     return (
         <div><h1 className='my-5 font-bold text-center'>Contact</h1>

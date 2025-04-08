@@ -14,9 +14,11 @@ import {
 } from "react-router-dom";
 
 import "../index.css";
+import Feature from "./component/Feature";
+import Slide from "./component/Slide";
 
-const Grocery = lazy(()=>import('./component/Grocery'));
-const RestaurantInfo = lazy(()=>import('./component/RestaurantInfo'));
+const Grocery = lazy(() => import('./component/Grocery'));
+const RestaurantInfo = lazy(() => import('./component/RestaurantInfo'));
 const App = () => {
     return (<>
         <Head />
@@ -42,14 +44,28 @@ const appRouter = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/features',
+                element: <Feature />,
+                children: [
+                    {
+                        path: 'slide',
+                        element: <Slide />
+                    },
+                    {
+                        path: 'code-review',
+                        element: <Slide />
+                    }
+                ]
             }
             ,
             {
                 path: '/grocery',
                 element: <Suspense fallback={<h1>Loading...........</h1>}><Grocery /></Suspense>
-            },{
-                path:'restaurant/:resId',
-                element:<Suspense fallback={<h1>Restaurant info loading.............</h1>}><RestaurantInfo/></Suspense>
+            }, {
+                path: 'restaurant/:resId',
+                element: <Suspense fallback={<h1>Restaurant info loading.............</h1>}><RestaurantInfo /></Suspense>
             }
         ],
 

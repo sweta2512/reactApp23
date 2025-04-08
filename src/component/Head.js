@@ -12,31 +12,30 @@ const Head = () => {
         setText('textttt')
     }, [])
 
-
-
     useLayoutEffect(() => {
-        setText2('textttt22222')    
+        setText2('textttt22222')
         return () => { }
     }, [])
 
-
+    const addCartHandler = () => { }
 
     return (
         <div className='flex justify-between bg-amber-100'>
             <img src={LOGO} className='w-29' />
             <div className='flex item-center'>
-            <ul className='flex mt-10 mr-20'>
-                <li className='pr-5'>Online Status:{onlineStatus?'🟢':'🔴'}</li>
-                <li className='pr-5'><Link to='/'>Home</Link></li>
-                <li className='pr-5'><Link to='/about'>About</Link> </li>
-                <li className='pr-5'><Link to='/contact'>Contact us</Link></li>
-                <li className='pr-5'><Link to='/feedback'>Feedback</Link></li>
-                <li className='pr-5'><Link to='/grocery'>Grocery</Link></li>
-                <li className='pr-5 text-bold' onClick={addCartHandler}>Cart</li>
+                <ul className='flex mt-10 mr-20'>
+                    <li className='pr-5'>Online Status:{onlineStatus ? '🟢' : '🔴'}</li>
+                    <li className='pr-5'><Link to='/'>Home</Link></li>
+                    <li className='pr-5'><Link to='/about'>About</Link> </li>
+                    <li className='pr-5'><Link to='/contact'>Contact us</Link></li>
+                    <li className='pr-5'><Link to='/feedback'>Feedback</Link></li>
+                    <li className='pr-5'><Link to='/grocery'>Grocery</Link></li>
+                    <li className='pr-5'><Link to='/features'>Features</Link></li>
+                    <li className='pr-5 text-bold' onClick={addCartHandler}>Cart</li>
 
-            </ul>
+                </ul>
             </div>
-           
+
 
         </div>
     )
