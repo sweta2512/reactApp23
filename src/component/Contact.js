@@ -21,6 +21,8 @@ const Contact = () => {
                     <button>Submit</button>
                 </div>
             </div>
+
+            
         </div>
     )
 }
