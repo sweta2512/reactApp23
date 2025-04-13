@@ -39,5 +39,15 @@ describe('Test cases for contact us page',()=>{
         expect(input.length).toBe(3);
     
     })
+
+    it('snapShot testing',()=>{
+        render(<Contact/>)
+        expect(screen).toMatchSnapshot();
+    })
+
+    it('snapShot testing second way',()=>{
+        let container = render(<Contact/>)
+        expect(container).toMatchSnapshot();
+    })
 })
 
